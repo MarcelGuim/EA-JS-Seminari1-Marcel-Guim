@@ -33,8 +33,10 @@ async function fetchOrderDetails() {
     const user = await getUser(1);
     const posts = await getPosts(user.id);
     const commentsPromises = posts.map(post => getComments(post.id));
+    //Retorna un array amb les promeses de cada petició de comentaris
     const commentsResults = await Promise.all(commentsPromises);
     //commentsResults és un vector de 10 posicions, on cada posició és un vector amb els comentaris del post
+    //El que ha fet és esperar a tenir totes les promeses resoltes i les ha guardat en un vector
     //console.log(commentsResults)
 
 
@@ -47,6 +49,8 @@ async function fetchOrderDetails() {
 
     console.log(allComments.length);
     console.log(commentsResults.length);
+    console.log(commentsResults[0]);
+    console.log(allComments[0]);    
   } catch (error) {
     console.error("Error:", error);
   }
