@@ -87,16 +87,27 @@ console.log(typeof greet, greet('Alice')); // function "Hi, I'm Alice"
 const greetArrow = (name) => `Hi, I'm ${name}`;
 console.log(typeof greetArrow, greetArrow('Alice')); // function "Hi, I'm Alice"
 
+const greetArrow2 = (number, number2) =>{
+  return number + number2;
+}
+
+console.log('AQUI');
+console.log(greetArrow2(20,greetArrow2(greetArrow2(5,5),10)));
+
 
 // Date (handling time & date)
 let today = new Date();
 console.log(typeof today, today); // object current date and time
 
 // Set (collection of unique values)
-let set = new Set([1, 2, 3, 3, 2]);
+let set = new Set([1, 2,5, 3, 3, 2,5]);
 console.log(typeof set, set); // object Set { 1, 2, 3 }
 
 //Map (key-value pairs with any type of key)
 let map = new Map();
 map.set("name", "Bob");
 console.log(typeof map, map); // object Map { 'name' => 'Bob' }
+
+let map2 = new Map();
+map2.set("uni", "EETAC");
+console.log(typeof map2, map2); // object Map { 'uni' 'EETAC' }

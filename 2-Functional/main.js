@@ -3,7 +3,7 @@
 
 // Given an array of numbers, double each number and return a new array
 const numbers = [1, 2, 3, 4, 5];
-const doubledNumbers = [];
+let doubledNumbers = [];
 
 // Imperative (Non-Functional) Approach
 for (let i = 0; i < numbers.length; i++) {
@@ -65,8 +65,17 @@ function applyOperation (a, b, operation) {
 function multiply (a, b) {
 	return a * b;
 }
+function divide (a, b) {
+	return a / b;
+}	
 
-console.log(aplicarOperacion(3, 4, multiply));  // 12
+function getOperation(operation){
+	return operation;
+}
+
+console.log(getOperation(multiply)(5,5));  // [Function: multiply]
+console.log(getOperation(divide)(5,5));  // [Function: multiply]
+console.log(applyOperation(3, 4, multiply));  // 12
 
 
 

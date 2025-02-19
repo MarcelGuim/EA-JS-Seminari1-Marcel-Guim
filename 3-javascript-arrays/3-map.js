@@ -19,6 +19,9 @@ const studentNames2 = students.map((student) => {
 const doubleAges = students.map((student) => student.age).map((age) => age * 2);
 console.log(doubleAges);
 
+const doubleAges2 = students.map((student) => student.age*2);
+console.log(doubleAges2);
+
 // An array of student JSON objects adding a course
 const courseProgramming = students.map((student) => ({
     ...student,
